@@ -1,0 +1,6 @@
+import datetime
+year = datetime.date.today().year
+today = datetime.date.today()
+
+print (year)
+print (today)

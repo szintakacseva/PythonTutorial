@@ -1,0 +1,1 @@
+<szamlak><!--23_2014 sz&#225;mlas&#233;ma alapj&#225;n--><export_datuma>2016-02-15</export_datuma><child>This child contains text.</child><child_with_tail>This child has regular text.</child_with_tail>And "tail" text.<child_with_entity_ref>This &amp;that</child_with_entity_ref></szamlak>
