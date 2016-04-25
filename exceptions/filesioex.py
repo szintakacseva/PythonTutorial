@@ -9,7 +9,6 @@ def fileio_exception1():
   except IOError as e:
     errno, strerror = e.args
     print("I/O error({0}): {1}".format(errno,strerror))
-    # e can be printed directly without using .args:
     # print(e)
   except ValueError:
     print("No valid integer in line.")
