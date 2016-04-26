@@ -1,3 +1,6 @@
+from functools import partial
+from operator import is_not
+
 __author__ = 'takacs'
 
 afa_data = {}
@@ -70,18 +73,31 @@ ceg = [["Szolgáltató"],
        ['cegemail'],
        ['cegweblap1'],
        ['']]
+
+vevocim=None
 megrendelo = [["Megrendelő:"],
-              ['selectedVevo.nev'],
-              ['vevocim'],
+              [],
               ['vevorendszam'],
               ['vevogyartmany'],
               ['vevogepjarmutipus'],
               ['vevogepjarmufajta'],
               ['vevogepjarmukmh']]
-cegadatoklist = [[ceg, megrendelo]]
 
+#cegadatoklist = [[ceg, megrendelo]]
+
+'''
 while None in megrendelo:
     megrendelo.remove(None)
 megrendelo = list(filter(None, megrendelo))
+'''
+#print(cegadatoklist)
 
-print(cegadatoklist)
+mylist = [1, 3, 7, None, 'vevi', 'levi']
+megrendel = list(filter(None, megrendelo))
+#mylist1 = filter(None, mylist)
+mylist1 = list(filter(partial(is_not, None), megrendelo))
+print(mylist1)
+#print(megrendelo)
+
+list2 = [x for x in megrendelo if x]
+print(list2)
